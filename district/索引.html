@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>深圳租赁市场 · 区域索引</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f4f6f9;color:#334155;line-height:1.5;padding:28px}
+.container{max-width:960px;margin:0 auto}
+a{color:#2d6ab5;text-decoration:none}
+a:hover{text-decoration:underline}
+.back{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#64748b;margin-bottom:16px;padding:4px 10px;background:#fff;border-radius:6px;border:1px solid #e4e8ee}
+.header{text-align:center;padding:36px 24px 28px;background:linear-gradient(135deg,#e8f0fe 0%,#f3f7fd 40%,#f0f4fa 100%);border-radius:14px;margin-bottom:24px;border:1px solid #d0daea}
+.header h1{font-size:24px;color:#2d5aa0;letter-spacing:2px;margin-bottom:4px}
+.header p{font-size:13px;color:#64748b}
+.header .tier-badge{display:inline-block;margin-top:8px;padding:3px 14px;border-radius:12px;font-size:12px;font-weight:700}
+.section{background:#fff;border-radius:12px;padding:22px 24px;margin-bottom:18px;border:1px solid #e4e8ee;box-shadow:0 1px 3px rgba(0,0,0,0.03)}
+.section h2{font-size:15px;color:#2d5aa0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section h2::before{content:'';width:3px;height:16px;background:linear-gradient(180deg,#4e8ed4,#7c6bbf);border-radius:2px;flex-shrink:0}
+.metric-row{display:flex;gap:10px;flex-wrap:wrap}
+.metric-box{flex:1;min-width:100px;background:#f9fafb;border-radius:8px;padding:12px 10px;text-align:center;border:1px solid #e4e8ee}
+.metric-box .val{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:2px}
+.metric-box .label{font-size:10px;color:#64748b}
+.metric-box .sub{font-size:9px;color:#94a3b8;margin-top:2px}
+.up{color:#27805a;font-weight:700}.down{color:#c0392b;font-weight:700}.flat{color:#64748b;font-weight:700}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;letter-spacing:.5px}
+.b-a{background:#eef8f0;color:#27805a;border:1px solid #b8dcc6}
+.b-b{background:#eef2fa;color:#2d6ab5;border:1px solid #b8cee8}
+.b-c{background:#fef9ee;color:#c68a17;border:1px solid #f5e0b0}
+.b-d{background:#fef2f2;color:#c0392b;border:1px solid #f5c6c6}
+.tier1{background:#fef2f2;color:#c0392b}.tier2{background:#fef9ee;color:#c68a17}.tier3{background:#eef8f0;color:#27805a}
+.bar-row{display:flex;align-items:center;margin:3px 0;font-size:11px}
+.bar-label{width:50px;text-align:right;padding-right:8px;font-weight:600;color:#475569;flex-shrink:0;font-size:10.5px}
+.bar-track{flex:1;height:18px;background:#f1f4f8;border-radius:3px;overflow:hidden;border:1px solid #e4e8ee}
+.bar-fill{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:6px;color:white;font-size:9.5px;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:11.5px;margin:6px 0}
+th{background:#f1f4f8;color:#334155;padding:7px 4px;text-align:center;font-weight:600;font-size:10.5px;border-bottom:2px solid #4e8ed4}
+td{padding:7px 4px;text-align:center;border-bottom:1px solid #f0f2f5;color:#475569;font-size:11px}
+.insight{background:#eef2fa;border-left:3px solid #4e8ed4;padding:8px 12px;border-radius:0 6px 6px 0;margin:6px 0;font-size:12px;color:#475569}
+.invest-box{background:#fef9ee;border:1px solid #f5e0b0;border-radius:8px;padding:14px;margin-top:8px}
+.invest-box h4{color:#c68a17;font-size:13px;margin-bottom:4px}
+.invest-box p{color:#475569;font-size:12px;line-height:1.6}
+.case-card{background:#f9fafb;border-radius:8px;padding:12px;border:1px solid #e4e8ee;margin:6px 0}
+.case-card .case-name{font-weight:700;color:#1e293b;font-size:13px}
+.case-card .case-meta{font-size:11px;color:#64748b;margin-top:2px}
+.profile{background:#f5f0fa;border:1px solid #e2d8ef;border-radius:8px;padding:12px;margin:8px 0;font-size:12px;color:#475569}
+.compare-row{display:flex;align-items:center;gap:6px;margin:4px 0;font-size:11px}
+.compare-label{width:80px;text-align:right;color:#64748b;flex-shrink:0;font-size:10.5px}
+.compare-bar{flex:1;height:16px;background:#f1f4f8;border-radius:3px;position:relative;overflow:hidden;border:1px solid #e4e8ee}
+.compare-district{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:6px;color:white;font-size:9px;font-weight:700}
+.compare-val{width:55px;font-size:10px;color:#475569;flex-shrink:0;font-weight:600}
+.legend{display:flex;gap:16px;font-size:10px;color:#64748b;margin-bottom:8px}
+.legend span::before{content:'';display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+@media print{body{background:#fff;padding:10px}.section{box-shadow:none}}
+
+.index-header{text-align:center;padding:40px 24px 28px;background:linear-gradient(135deg,#e8f0fe 0%,#f3f7fd 40%,#f0f4fa 100%);border-radius:14px;margin-bottom:24px;border:1px solid #d0daea}
+.index-header h1{font-size:26px;color:#2d5aa0;letter-spacing:2px;margin-bottom:4px}
+.index-header p{font-size:13px;color:#64748b}
+</style></head>
+<body>
+<div class="container">
+
+<div class="index-header">
+  <h1>🏠 深圳租赁市场 · 区域索引</h1>
+  <p>含/不含城中村 双版本对比 &nbsp;|&nbsp; 9区 · 3梯队</p>
+</div>
+
+<div class="section">
+  <h2>全市概览</h2>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <div class="metric-box" style="min-width:90px"><div class="val">74</div><div class="label">不含城中村均价</div><div class="sub">含: 55 元/㎡</div></div>
+    <div class="metric-box" style="min-width:90px"><div class="val">5,500</div><div class="label">不含城中村套均</div><div class="sub">含: 4,300 元</div></div>
+    <div class="metric-box" style="min-width:90px"><div class="val flat">持平</div><div class="label">2025同比</div></div>
+    <div class="metric-box" style="min-width:90px"><div class="val">-26%</div><div class="label">城中村拉低幅度</div></div>
+  </div>
+  <div style="margin-top:14px;padding:14px 16px;background:#f9fafb;border-radius:8px;border:1px solid #e4e8ee;font-size:12px;color:#475569;line-height:1.8">
+    <div style="font-weight:700;color:#2d5aa0;margin-bottom:6px;font-size:13px">📊 2025-2026年阶段性总结</div>
+    <div><b>价格走势：</b>2024-2025年全市租金持续下行，2025年同比跌幅最深达-10.6%（11月），全年均价从83元降至69元/㎡。2026年触底企稳，一线城市租金率先环比转正，核心区节后涨幅5-10%，但同比仍处修复期。</div>
+    <div><b>区域分化：</b>南山（+2%）、福田（+1.1%）逆势上涨，光明（-17%）跌幅最大，核心区与外围区涨幅差超19个百分点。产业密度决定韧性，科技/金融区抗跌，工业区承压。</div>
+    <div><b>城中村效应：</b>城中村占全市租赁约30%，纳入后均价拉低26%（74→55元/㎡），套均拉低22%（5,500→4,300元）。龙岗/宝安/龙华城中村占比超35%，拉低幅度最大。</div>
+    <div><b>保租房冲击：</b>2025年深圳推出8批次共11,732套保租房（市场价6折），光明/坪山首当其冲，南山/福田因选址少影响有限。</div>
+    <div><b>投资亮点：</b>罗湖老旧小区回报率3.4%全市最高；龙华商办改租（龙光玖钻）净收益率6.8%为收益天花板。</div>
+  </div>
+</div>
+
+<h3 style="margin:18px 0 8px;font-size:14px;color:#2d5aa0"><span class="tier-badge tier1" style="font-size:11px">一梯队</span></h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px">
+<a href="南山区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">南山区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">115</b> / 含城中村 <b style="color:#7c6bbf">95</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="up">+2%</span>　抗跌 <span class="badge b-a">A</span>　城中村拉低 <span class="down">17%</span></div>
+</a>
+<a href="福田区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">福田区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">105</b> / 含城中村 <b style="color:#7c6bbf">88</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="up">+1.1%</span>　抗跌 <span class="badge b-a">A</span>　城中村拉低 <span class="down">16%</span></div>
+</a>
+</div>
+<h3 style="margin:18px 0 8px;font-size:14px;color:#2d5aa0"><span class="tier-badge tier2" style="font-size:11px">二梯队</span></h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px">
+<a href="罗湖区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">罗湖区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">77</b> / 含城中村 <b style="color:#7c6bbf">62</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="flat">持平</span>　抗跌 <span class="badge b-b">B</span>　城中村拉低 <span class="down">19%</span></div>
+</a>
+<a href="宝安区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">宝安区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">62</b> / 含城中村 <b style="color:#7c6bbf">48</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">微跌</span>　抗跌 <span class="badge b-b">B</span>　城中村拉低 <span class="down">23%</span></div>
+</a>
+<a href="龙华区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">龙华区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">60</b> / 含城中村 <b style="color:#7c6bbf">46</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">>-5%</span>　抗跌 <span class="badge b-c">C</span>　城中村拉低 <span class="down">23%</span></div>
+</a>
+</div>
+<h3 style="margin:18px 0 8px;font-size:14px;color:#2d5aa0"><span class="tier-badge tier3" style="font-size:11px">三梯队</span></h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px">
+<a href="龙岗区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">龙岗区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">50</b> / 含城中村 <b style="color:#7c6bbf">38</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">下跌</span>　抗跌 <span class="badge b-c">C</span>　城中村拉低 <span class="down">24%</span></div>
+</a>
+<a href="盐田区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">盐田区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">50</b> / 含城中村 <b style="color:#7c6bbf">45</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">微跌</span>　抗跌 <span class="badge b-c">C</span>　城中村拉低 <span class="down">10%</span></div>
+</a>
+<a href="光明区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">光明区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">40</b> / 含城中村 <b style="color:#7c6bbf">35</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">-17%</span>　抗跌 <span class="badge b-d">D</span>　城中村拉低 <span class="down">13%</span></div>
+</a>
+<a href="坪山区.html" style="display:block;background:#f9fafb;border-radius:10px;padding:14px;border:1px solid #e4e8ee;text-decoration:none;transition:transform .15s,border-color .15s" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='#4e8ed4'" onmouseout="this.style.transform='';this.style.borderColor='#e4e8ee'">
+  <div style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:4px">坪山区</div>
+  <div style="font-size:11px;color:#64748b">不含 <b style="color:#1e293b">30</b> / 含城中村 <b style="color:#7c6bbf">26</b> 元/㎡</div>
+  <div style="font-size:11px;color:#64748b;margin-top:2px">同比 <span class="down">下跌</span>　抗跌 <span class="badge b-d">D</span>　城中村拉低 <span class="down">13%</span></div>
+</a>
+</div>
+
+
+<div style="text-align:center;padding:12px 0;font-size:10px;color:#94a3b8">
+  数据来源：中指研究院 / 深圳中原 / 贝壳研究院 / 观点指数 / 克而瑞 &nbsp;|&nbsp; 更新于 2026.05
+</div>
+
+</div>
+</body></html>
