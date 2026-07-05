@@ -5,7 +5,7 @@
 <meta name="viewport" content="1100">
 <title>深圳租赁市场 · 人口走势</title>
 <meta property="og:title" content="深圳租赁市场 · 人口走势">
-<meta property="og:description" content="深圳人口净流入全国第一 | 1825万常住人口 | 9区人口-租金联动 | 跨城通勤">
+<meta property="og:description" content="深圳人口净流入全国第一 | 1825万常住人口 | 9区人口-租金联动">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://pip-uu.github.io/sz-rental-dashboard/og-preview.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,157 +22,199 @@ table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0 12px}
 th{background:#f1f4f8;color:#334155;padding:10px 6px;text-align:center;font-weight:600;font-size:11.5px;letter-spacing:.5px;border-bottom:2px solid #4e8ed4}
 td{padding:9px 6px;text-align:center;border-bottom:1px solid #f0f2f5;color:#475569}
 tr:hover td{background:#f8fafc}
-.metric-row{display:flex;gap:10px;flex-wrap:wrap}
-.metric-box{flex:1;min-width:100px;background:#f9fafb;border-radius:8px;padding:12px 10px;text-align:center;border:1px solid #e4e8ee}
-.metric-box .val{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:2px}
-.metric-box .label{font-size:10px;color:#64748b}
-.metric-box .sub{font-size:9px;color:#94a3b8;margin-top:2px}
 .up{color:#27805a;font-weight:700}
 .down{color:#c0392b;font-weight:700}
 .flat{color:#64748b}
 .note{background:#eef2fa;border-left:3px solid #4e8ed4;padding:10px 14px;border-radius:0 6px 6px 0;margin:10px 0;font-size:12px;color:#475569}
-.finding{background:#f5f0fa;border:1px solid #e2d8ef;border-radius:8px;padding:14px;margin:8px 0}
-.finding h4{color:#6d5ea0;font-size:13px;margin-bottom:4px}
+.finding{border-radius:8px;padding:14px;margin:8px 0}
+.finding h4{font-size:13px;margin-bottom:4px}
 .finding p{color:#475569;font-size:12px;line-height:1.6}
-.bar-row{display:flex;align-items:center;margin:3px 0;font-size:11.5px}
-.bar-label{width:44px;text-align:right;padding-right:10px;font-weight:700;color:#334155;flex-shrink:0}
-.bar-track{flex:1;height:22px;background:#f1f4f8;border-radius:4px;overflow:hidden;border:1px solid #e4e8ee}
-.bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;color:white;font-size:10.5px;font-weight:700;transition:width .6s}
+.bar-row{display:flex;align-items:center;margin:4px 0;font-size:11.5px}
+.bar-label{width:50px;text-align:right;padding-right:10px;font-weight:700;color:#334155;flex-shrink:0}
+.bar-track{flex:1;height:26px;background:#f1f4f8;border-radius:4px;overflow:hidden;border:1px solid #e4e8ee}
+.bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:10px;color:white;font-size:11px;font-weight:700;transition:width .6s}
 .back-link{display:inline-block;margin-bottom:16px;color:#2d6ab5;text-decoration:none;font-size:12px}
 .back-link:hover{text-decoration:underline}
-.ac1{background:#eef8f0;border-color:#b8dcc6;color:#27805a;border:1px solid;border-radius:8px;padding:12px;font-size:12px}
-.ac1 h4{font-size:13px;margin-bottom:4px}
-.ac1 p{color:#475569;line-height:1.5}
+.metric-row{display:flex;gap:12px;flex-wrap:wrap}
+.metric-box{flex:1;min-width:120px;border-radius:10px;padding:16px 12px;text-align:center;position:relative;overflow:hidden}
+.metric-box .val{font-size:22px;font-weight:800;margin-bottom:2px}
+.metric-box .label{font-size:10px;letter-spacing:.5px}
+.metric-box .sub{font-size:9px;margin-top:3px;opacity:.8}
+.mb-green{background:linear-gradient(135deg,#eef8f0,#d4edda);border:1px solid #b8dcc6;color:#27805a}
+.mb-blue{background:linear-gradient(135deg,#eef2fa,#d4e3f5);border:1px solid #b8cee8;color:#2d6ab5}
+.mb-purple{background:linear-gradient(135deg,#f5f0fa,#e4d8ef);border:1px solid #d4c6e0;color:#6d5ea0}
+.mb-amber{background:linear-gradient(135deg,#fef9ee,#f5e6c8);border:1px solid #f0d89a;color:#92680d}
+.mb-red{background:linear-gradient(135deg,#fef2f2,#f5c6c6);border:1px solid #f5b0b0;color:#c0392b}
+.hflow{text-align:center;padding:20px;font-size:13px;line-height:2.2}
+.hflow .city{display:inline-block;padding:4px 14px;border-radius:8px;font-weight:700;margin:2px 4px}
+.hflow .arrow{color:#4e8ed4;font-weight:700;margin:0 4px}
+.c-shenzhen{background:linear-gradient(135deg,#2d5aa0,#4e8ed4);color:#fff;font-size:15px;padding:6px 20px}
+.c-national{background:#eef2fa;color:#2d6ab5;border:1px solid #b8cee8}
+.c-district{background:#f9fafb;color:#334155;border:1px solid #e4e8ee;font-size:12px}
+.c-dongguan{background:#fef9ee;color:#92680d;border:1px solid #f0d89a}
+.persona-row{display:flex;gap:10px;margin:12px 0}
+.persona{flex:1;border-radius:10px;padding:16px;border:1px solid;position:relative}
+.persona .p-icon{font-size:24px;margin-bottom:6px}
+.persona .p-name{font-size:13px;font-weight:700;margin-bottom:4px}
+.persona .p-detail{font-size:11px;color:#64748b;line-height:1.6}
+.persona .p-budget{font-size:11px;font-weight:700;margin-top:6px}
+.p1{background:#eef2fa;border-color:#b8cee8;color:#2d6ab5}
+.p2{background:#fef9ee;border-color:#f0d89a;color:#92680d}
+.p3{background:#eef8f0;border-color:#b8dcc6;color:#27805a}
+.p4{background:#f5f0fa;border-color:#d4c6e0;color:#6d5ea0}
+.p5{background:#fef2f2;border-color:#f5b0b0;color:#c0392b}
+.judge-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
+.judge{border-radius:10px;padding:16px;border:1px solid}
+.judge h4{font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.judge h4 .j-icon{font-size:16px}
+.judge p{font-size:12px;line-height:1.7;color:#475569}
+.j1{background:linear-gradient(135deg,#fef2f2,#fff);border-color:#f5b0b0}
+.j1 h4{color:#c0392b}
+.j2{background:linear-gradient(135deg,#eef8f0,#fff);border-color:#b8dcc6}
+.j2 h4{color:#27805a}
+.j3{background:linear-gradient(135deg,#eef2fa,#fff);border-color:#b8cee8}
+.j3 h4{color:#2d6ab5}
+.j4{background:linear-gradient(135deg,#f5f0fa,#fff);border-color:#d4c6e0}
+.j4 h4{color:#6d5ea0}
+.district-flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+.df-card{border-radius:8px;padding:12px;border:1px solid #e4e8ee;background:#f9fafb;font-size:11px;transition:transform .15s,border-color .15s}
+.df-card:hover{transform:translateY(-2px);border-color:#4e8ed4}
+.df-card .df-name{font-size:14px;font-weight:700;margin-bottom:4px}
+.df-card .df-flow{color:#64748b;margin-bottom:2px}
+.df-card .df-impact{font-weight:600;margin-bottom:2px}
+.df-card .df-trend{font-size:10px;color:#94a3b8}
+.df-hot{border-color:#b8dcc6;background:#eef8f0}
+@media(max-width:768px){.metric-row{flex-wrap:wrap}.metric-box{min-width:45%}.persona-row{flex-wrap:wrap}.persona{min-width:45%}.district-flow{grid-template-columns:1fr}.judge-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<a class="back-link" href="integrated.html">← 返回主看板</a>
+
+<div style="background:linear-gradient(135deg,#1a3a6b 0%,#2d5aa0 40%,#4e8ed4 75%,#7c6bbf 100%);border-radius:14px;padding:36px 32px 28px;margin-bottom:22px;color:#fff;position:relative;overflow:hidden">
+<div style="position:absolute;top:-40px;right:-30px;width:180px;height:180px;background:rgba(255,255,255,0.05);border-radius:50%"></div>
+<div style="position:absolute;bottom:-60px;left:60px;width:240px;height:240px;background:rgba(255,255,255,0.03);border-radius:50%"></div>
+<div style="font-size:28px;font-weight:800;letter-spacing:2px;margin-bottom:6px">深圳 · 人口走势</div>
+<div style="font-size:13px;opacity:.75;margin-bottom:16px">数据截至 2026年6月 | 来源：深圳市统计局、国家统计局、智联招聘</div>
+<div style="display:flex;gap:32px;font-size:12px;opacity:.85">
+<span>1825万常住人口</span><span>25.9万/年净增</span><span>32.5岁平均年龄</span><span>940万异地务工</span>
+</div>
+</div>
+
 <div class="container">
 
-<div style="text-align:center;padding:36px 24px 24px;background:linear-gradient(135deg,#e8f0fe 0%,#f3f7fd 100%);border-radius:16px;margin-bottom:28px;border:1px solid #d0daea">
-  <h1 style="font-size:24px;color:#2d5aa0;letter-spacing:3px;margin-bottom:4px">深圳租赁市场 · 人口走势</h1>
-  <p style="font-size:12px;color:#64748b">数据截至 2026年6月 | 来源：深圳市统计局、国家统计局、智联招聘</p>
-</div>
-
-<a class="back-link" href="integrated.html">&larr; 返回主看板</a>
-
-<!-- SECTION: 全市人口总览 -->
+<!-- 一、全市人口总览 -->
 <div class="section">
-  <h2>全市人口总览</h2>
-  <div class="metric-row" style="margin-bottom:0">
-    <div class="metric-box"><div class="val" style="color:#27805a">1,825万</div><div class="label">常住人口</div><div class="sub">首破1800万</div></div>
-    <div class="metric-box"><div class="val" style="color:#27805a">+25.9万</div><div class="label">年净增</div><div class="sub">全国第一</div></div>
-    <div class="metric-box"><div class="val">32.5岁</div><div class="label">平均年龄</div><div class="sub">最年轻一线</div></div>
-    <div class="metric-box"><div class="val">940万</div><div class="label">异地务工</div><div class="sub">占就业78%</div></div>
-    <div class="metric-box"><div class="val">719万+</div><div class="label">人才总量</div><div class="sub">高技能166.5万</div></div>
-  </div>
-  <div class="note">📌 城镇化率99.79%全国最高 | 95后人才吸引力连续3年全国第一 | 距2035年1900万上限仅余约75万</div>
+<h2>全市人口总览</h2>
+<div class="metric-row">
+<div class="metric-box mb-blue"><div class="val">1824.85万</div><div class="label">常住人口</div><div class="sub">2025年末首破1800万</div></div>
+<div class="metric-box mb-green"><div class="val">+25.9万</div><div class="label">年净增</div><div class="sub">全国城市增量第一</div></div>
+<div class="metric-box mb-purple"><div class="val">32.5岁</div><div class="label">平均年龄</div><div class="sub">最年轻一线城市</div></div>
+<div class="metric-box mb-amber"><div class="val">719万+</div><div class="label">人才总量</div><div class="sub">高技能166.5万</div></div>
+<div class="metric-box mb-red"><div class="val">~75万</div><div class="label">人口余额</div><div class="sub">距2035年1900万上限</div></div>
+</div>
+<div class="note">城镇化率 99.79% 全国最高 | 劳动人口占比 ~80% | 异地务工 940万占就业78% | 大专及以上学历 640万+占53%</div>
 </div>
 
-<!-- SECTION: 年度人口增量走势 -->
+<!-- 二、年度人口增量走势 -->
 <div class="section">
-  <h2>年度人口增量走势</h2>
-  <table>
-    <tr><th>年份</th><th>常住人口(万)</th><th>年增量(万)</th><th>全国排名</th><th>关键事件</th></tr>
-    <tr><td>2021</td><td>1,768</td><td>12.8</td><td>一线第一</td><td>疫情影响，增量锐减</td></tr>
-    <tr><td>2022</td><td>1,766</td><td class="down">-1.9</td><td>—</td><td>首次负增长 ⚠️</td></tr>
-    <tr><td>2023</td><td>1,779</td><td>12.8</td><td>一线第一</td><td>修复回暖</td></tr>
-    <tr><td>2024</td><td>1,799</td><td class="up">19.9</td><td>全国第一</td><td>强势反弹</td></tr>
-    <tr><td style="font-weight:700;color:#1e293b">2025</td><td style="font-weight:700">1,825</td><td class="up" style="font-size:14px">25.9</td><td style="font-weight:700;color:#27805a">全国第一</td><td style="font-weight:700">首破1800万 🔥</td></tr>
-  </table>
-  <h3>年净增人口柱状图</h3>
-  <div class="bar-row"><div class="bar-label">2021</div><div class="bar-track"><div class="bar-fill" style="width:49%;background:linear-gradient(90deg,#3880a8,#60b8e8)">12.8万</div></div></div>
-  <div class="bar-row"><div class="bar-label">2022</div><div class="bar-track"><div class="bar-fill" style="width:4%;background:#c0392b">-1.9</div></div></div>
-  <div class="bar-row"><div class="bar-label">2023</div><div class="bar-track"><div class="bar-fill" style="width:49%;background:linear-gradient(90deg,#3880a8,#60b8e8)">12.8万</div></div></div>
-  <div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill" style="width:77%;background:linear-gradient(90deg,#27805a,#4daa7a)">19.9万</div></div></div>
-  <div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#1a6b3a,#2d9d5a)">25.9万 🔥</div></div></div>
+<h2>年度人口增量走势</h2>
+<table>
+<tr><th>年份</th><th>常住人口(万)</th><th>年增量(万)</th><th>全国排名</th><th>关键事件</th></tr>
+<tr><td>2021</td><td>1,768</td><td class="up">+12.8</td><td>—</td><td>疫情影响，增量锐减</td></tr>
+<tr><td>2022</td><td>1,766</td><td class="down">-1.9</td><td>—</td><td>首次负增长</td></tr>
+<tr><td>2023</td><td>1,779</td><td class="up">+12.8</td><td>一线第一</td><td>修复回暖</td></tr>
+<tr><td>2024</td><td>1,799</td><td class="up">+19.9</td><td>全国第一</td><td>强势反弹</td></tr>
+<tr><td style="font-weight:700">2025</td><td style="font-weight:700">1,825</td><td class="up" style="font-size:14px">+25.9</td><td style="font-weight:700;color:#27805a">全国第一</td><td style="font-weight:700">首破1800万</td></tr>
+</table>
+<h3>近5年净增人口走势</h3>
+<div class="bar-row"><div class="bar-label">2021</div><div class="bar-track"><div class="bar-fill" style="width:49%;background:linear-gradient(90deg,#4e8ed4,#7c6bbf)">12.8万</div></div></div>
+<div class="bar-row"><div class="bar-label">2022</div><div class="bar-track"><div class="bar-fill" style="width:3%;background:#c0392b;min-width:50px">-1.9万</div></div></div>
+<div class="bar-row"><div class="bar-label">2023</div><div class="bar-track"><div class="bar-fill" style="width:49%;background:linear-gradient(90deg,#4e8ed4,#7c6bbf)">12.8万</div></div></div>
+<div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill" style="width:77%;background:linear-gradient(90deg,#4e8ed4,#7c6bbf)">19.9万</div></div></div>
+<div class="bar-row"><div class="bar-label" style="color:#27805a">2025</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#27805a,#4eaa7a)">25.9万</div></div></div>
+<div class="note">2020年七普数据调整（含统计口径修正），不可直接与前一年对比，故从2021年起展示</div>
 </div>
 
-<!-- SECTION: 各区人口分布 -->
+<!-- 三、各区人口分布 -->
 <div class="section">
-  <h2>各区人口分布与租赁人口特征</h2>
-  <table>
-    <tr><th>区域</th><th>常住人口(万)</th><th>人口密度</th><th>租赁人口特征</th><th>年度度</th></tr>
-    <tr><td style="font-weight:700">宝安</td><td>~560</td><td>8,500+</td><td>最大外来人口承接区</td><td>★★★★</td></tr>
-    <tr><td style="font-weight:700">龙岗</td><td>~430</td><td>7,200+</td><td>租赁体量最大</td><td>★★★</td></tr>
-    <tr><td style="font-weight:700">龙华</td><td>~260</td><td>14,000+</td><td>北站枢纽，年轻白领</td><td>★★★★★</td></tr>
-    <tr><td style="font-weight:700">南山</td><td>~220</td><td>11,000+</td><td>高薪科技，月薪中位1.8万</td><td>★★★★★</td></tr>
-    <tr><td style="font-weight:700">光明</td><td>~120</td><td>5,500+</td><td>科学城新市民+保租房</td><td>★★★★</td></tr>
-    <tr><td style="font-weight:700">福田</td><td>~165</td><td>20,000+</td><td>金融+总部人才</td><td>★★★★</td></tr>
-    <tr><td>罗湖</td><td>~115</td><td>14,500+</td><td>港人北上+老城区</td><td>★★★</td></tr>
-    <tr><td>坪山</td><td>~65</td><td>3,800+</td><td>比亚迪产业链工人</td><td>★★★</td></tr>
-    <tr><td>盐田</td><td>~25</td><td>3,200+</td><td>港口+旅游</td><td>★★</td></tr>
-  </table>
-  <div class="note">📌 宝安+龙岗两区占全市常住人口超50%，是租赁市场最大底盘；南山+福田虽仅占21%，但高薪密度最高</div>
+<h2>各区人口分布与租赁特征</h2>
+<div class="district-flow">
+<div class="df-card df-hot"><div class="df-name" style="color:#2d6ab5">宝安区</div><div class="df-flow">~560万 | 密度8500+</div><div class="df-impact up">最大外来人口承接区</div><div class="df-trend">产业工人+白领 | 年轻度★★★★</div></div>
+<div class="df-card df-hot"><div class="df-name" style="color:#2d6ab5">龙岗区</div><div class="df-flow">~430万 | 密度7200+</div><div class="df-impact flat">租赁体量最大</div><div class="df-trend">低租金承接 | 年轻度★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#6d5ea0">南山区</div><div class="df-flow">~220万 | 密度11000+</div><div class="df-impact up">高薪科技人才密度最高</div><div class="df-trend">月薪中位数1.8万 | 年轻度★★★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#6d5ea0">福田区</div><div class="df-flow">~165万 | 密度20000+</div><div class="df-impact up">金融+总部高净值</div><div class="df-trend">高净值租客 | 年轻度★★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#92680d">龙华区</div><div class="df-flow">~260万 | 密度14000+</div><div class="df-impact flat">北站枢纽人口枢纽</div><div class="df-trend">年轻白领 | 年轻度★★★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#92680d">罗湖区</div><div class="df-flow">~115万 | 密度14500+</div><div class="df-impact flat">港人北上+老城存量</div><div class="df-trend">回报率最高 | 年轻度★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#27805a">光明区</div><div class="df-flow">~120万 | 密度5500+</div><div class="df-impact up">13号线最大受益区</div><div class="df-trend">科学城新市民 | 年轻度★★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#64748b">坪山区</div><div class="df-flow">~65万 | 密度3800+</div><div class="df-impact flat">比亚迪产业链</div><div class="df-trend">技术工人 | 年轻度★★★</div></div>
+<div class="df-card"><div class="df-name" style="color:#64748b">盐田区</div><div class="df-flow">~25万 | 密度3200+</div><div class="df-impact flat">港口+旅游</div><div class="df-trend">规模小 | 年轻度★★</div></div>
+</div>
+<div class="note">宝安+龙岗占全市常住人口超50%，租赁市场最大底盘；南山+福田仅占21%但高薪密度最高，支撑高端租金</div>
 </div>
 
-<!-- SECTION: 租赁人口画像 -->
+<!-- 四、租赁人口画像 -->
 <div class="section">
-  <h2>租赁人口画像</h2>
-  <div style="margin:12px 0">
-    <table>
-      <tr><th>人群</th><th>规模</th><th>集中区域</th><th>月租预算</th><th>偏好</th></tr>
-      <tr><td style="font-weight:700;color:#2d5aa0">科技/金融白领</td><td>~200万</td><td>南山+福田</td><td>4,000-8,000</td><td>小户型、品质优先</td></tr>
-      <tr><td style="font-weight:700">制造业产业工人</td><td>~350万</td><td>宝安+龙华+坪山</td><td>800-2,500</td><td>城中村、价格敏感</td></tr>
-      <tr><td>服务业/零售/餐饮</td><td>~200万</td><td>各区分布</td><td>1,000-3,000</td><td>通勤优先</td></tr>
-      <tr><td style="color:#27805a;font-weight:700">应届毕业生</td><td>~40万/年</td><td>全市分布</td><td>1,500-3,500</td><td>地铁口、合租</td></tr>
-      <tr><td>港人/外籍</td><td>~15万+</td><td>罗湖+南山+福田</td><td>3,000-10,000</td><td>品质、配套</td></tr>
-    </table>
-  </div>
+<h2>租赁人口画像</h2>
+<div class="persona-row">
+<div class="persona p1"><div class="p-icon">💻</div><div class="p-name">科技/金融白领</div><div class="p-detail">~200万 | 南山+福田<br>小户型偏好</div><div class="p-budget">月租 4000-8000</div></div>
+<div class="persona p2"><div class="p-icon">🔧</div><div class="p-name">制造业产业工人</div><div class="p-detail">~350万 | 宝安+龙华+坪山<br>城中村主力</div><div class="p-budget">月租 800-2500</div></div>
+<div class="persona p3"><div class="p-icon">🛒</div><div class="p-name">服务业/零售</div><div class="p-detail">~200万 | 各区分布<br>通勤优先</div><div class="p-budget">月租 1000-3000</div></div>
+<div class="persona p4"><div class="p-icon">🎓</div><div class="p-name">应届毕业生</div><div class="p-detail">~40万/年 | 全市分布<br>地铁口偏好</div><div class="p-budget">月租 1500-3500</div></div>
+<div class="persona p5"><div class="p-icon">🌏</div><div class="p-name">港人/外籍</div><div class="p-detail">~15万+ | 罗湖+南山+福田<br>品质优先</div><div class="p-budget">月租 3000-10000</div></div>
+</div>
 </div>
 
-<!-- SECTION: 人口-租金联动 -->
+<!-- 五、人口-租金联动 -->
 <div class="section">
-  <h2>各区人口流入方向与租金影响</h2>
-  <table>
-    <tr><th>区域</th><th>人口流入方向</th><th>对租金影响</th><th>2026变化趋势</th></tr>
-    <tr><td style="font-weight:700">南山</td><td>全国→科技园</td><td>需求刚性，最抗跌</td><td>13号线扩大通勤辐射</td></tr>
-    <tr><td style="font-weight:700">福田</td><td>全国→CBD</td><td>小户型供不应求</td><td>售转租回流，供给小增</td></tr>
-    <tr><td style="font-weight:700">罗湖</td><td>港人北上+老城区</td><td>稳定需求，回报最高</td><td>港人消费带动住宅</td></tr>
-    <tr><td>宝安</td><td>南山外溢+省内</td><td>需求大但支付力有限</td><td>13号线石岩段加速外溢</td></tr>
-    <tr><td>龙华</td><td>福田外溢+北站</td><td>价格洼地吸引</td><td>22/27号线中期看好</td></tr>
-    <tr><td>龙岗</td><td>低预算外溢</td><td>供给过剩，承压</td><td>需等产业导入</td></tr>
-    <tr><td style="color:#27805a;font-weight:700">光明</td><td>科学城新市民</td><td>流入但支付力低</td><td style="color:#27805a;font-weight:700">13号线贯通最大受益区</td></tr>
-    <tr><td>坪山</td><td>比亚迪产业链</td><td>流入但租赁需求弱</td><td>19号线预期</td></tr>
-    <tr><td>盐田</td><td>港口+旅游</td><td>需求有限</td><td>18号线未获批</td></tr>
-  </table>
-  <h3>跨城通勤：深莞融合</h3>
-  <table>
-    <tr><th>指标</th><th>数据</th></tr>
-    <tr><td>大湾区跨城通勤</td><td style="font-weight:700">129万人/日</td></tr>
-    <tr><td>深莞通勤模式</td><td>"深圳上班、东莞睡觉"</td></tr>
-    <tr><td>10号线东延</td><td>凤岗段待国家批复</td></tr>
-    <tr><td>深惠城际</td><td>一期建设中，凤岗站已施工</td></tr>
-  </table>
+<h2>人口-租金联动</h2>
+<h3>各区人口流入方向与租金影响</h3>
+<table>
+<tr><th>区域</th><th>人口流入方向</th><th>对租金影响</th><th>2026变化趋势</th></tr>
+<tr><td style="font-weight:700;color:#2d6ab5">南山</td><td>全国→科技园</td><td class="up">需求刚性，最抗跌</td><td>13号线扩大通勤辐射</td></tr>
+<tr><td style="font-weight:700;color:#2d6ab5">福田</td><td>全国→CBD</td><td class="up">小户型供不应求</td><td>售转租回流，供给小增</td></tr>
+<tr><td style="font-weight:700;color:#92680d">罗湖</td><td>港人北上+老城留存</td><td class="flat">稳定需求</td><td>回报率最高，港人消费带动</td></tr>
+<tr><td style="font-weight:700;color:#92680d">宝安</td><td>南山外溢+省内</td><td class="flat">需求大但支付力有限</td><td>13号线石岩段加速外溢</td></tr>
+<tr><td style="font-weight:700;color:#92680d">龙华</td><td>福田外溢+北站枢纽</td><td class="flat">价格洼地吸引</td><td>22/27号线预期，中期看好</td></tr>
+<tr><td style="font-weight:700;color:#64748b">龙岗</td><td>市内低预算外溢</td><td class="down">供给过剩，承压</td><td>需等产业导入</td></tr>
+<tr><td style="font-weight:700;color:#27805a">光明</td><td>科学城新市民</td><td class="flat">流入但支付力低</td><td>13号线贯通最大受益</td></tr>
+<tr><td style="font-weight:700;color:#64748b">坪山</td><td>比亚迪产业链</td><td class="flat">流入但需求弱</td><td>19号线预期，中长期关注</td></tr>
+<tr><td style="font-weight:700;color:#64748b">盐田</td><td>港口+旅游</td><td class="flat">需求有限</td><td>18号线未获批</td></tr>
+</table>
+<h3>跨城通勤：深莞融合</h3>
+<div class="hflow">
+<span class="city c-national">广州</span>
+<span class="arrow">→</span>
+<span class="city c-shenzhen">深圳</span>
+<span class="arrow">→</span>
+<span class="city c-dongguan">东莞</span>
+<br>
+<span style="font-size:11px;color:#64748b">大湾区跨城通勤 129万人/日 | "深圳上班、东莞睡觉" | 深惠城际一期建设中</span>
+</div>
 </div>
 
-<!-- SECTION: 人口趋势判断 -->
+<!-- 六、趋势判断 -->
 <div class="section">
-  <h2>人口趋势对租赁市场的判断</h2>
-  <div class="finding" style="border-color:#f5c6c6;background:#fef2f2">
-    <h4 style="color:#c0392b">1. 人口余额告急</h4>
-    <p>距2035年1900万上限仅余75万，按当前增速3年内可能触及上限，年均增量将被迫降至7-8万。<b>新增租赁需求边际递减是确定趋势。</b></p>
-  </div>
-  <div class="finding" style="border-color:#b8dcc6;background:#eef8f0">
-    <h4 style="color:#27805a">2. 95后持续涌入</h4>
-    <p>连续3年95后人才吸引力全国第一。2026年新补贴：本科最高6万、硕士11万、博士10万+。短期：应届生持续推高毕业季租赁需求。</p>
-  </div>
-  <div class="finding" style="border-color:#b8cee8;background:#eef2fa">
-    <h4 style="color:#2d6ab5">3. 跨城通勤常态化</h4>
-    <p>深莞跨城通勤129万/日，10号线东延、深惠城际推进中。长期：部分需求向东莞/惠州外溢，但核心区需求不可替代。</p>
-  </div>
-  <div class="finding" style="border-color:#e2d8ef;background:#f5f0fa">
-    <h4 style="color:#6d5ea0">4. 人口结构优化 &gt; 数量增长</h4>
-    <p>719万人才总量、2.6万家国家高新技术企业密度全国第一。高技能人口支撑中高端租赁，但普通劳动力租赁需求见顶。</p>
-  </div>
+<h2>人口趋势判断</h2>
+<div class="judge-grid">
+<div class="judge j1">
+<h4><span class="j-icon">🔴</span> 人口余额告急</h4>
+<p>2035年严控1900万，当前1825万仅余~75万。按25万+/年增速，3年内触及上限，年均增量将被迫降至7-8万。<b>新增租赁需求边际递减是确定趋势。</b></p>
 </div>
-
-<!-- Footer -->
-<div style="text-align:center;padding:16px 0;font-size:11px;color:#94a3b8">
-  数据来源：深圳市统计局 / 国家统计局 / 智联招聘 / 安居客 &nbsp;|&nbsp; 更新于 2026.06 &nbsp;|&nbsp; <a href="integrated.html" style="color:#2d6ab5">返回主看板</a>
+<div class="judge j2">
+<h4><span class="j-icon">🟢</span> 95后持续涌入</h4>
+<p>连续3年"95后人才吸引力"全国第一。本科最高6万、硕士11万补贴落地，6折过渡性住房。<b>应届生持续推高毕业季租赁需求。</b></p>
+</div>
+<div class="judge j3">
+<h4><span class="j-icon">🔵</span> 跨城通勤常态化</h4>
+<p>深莞跨城通勤129万/日，10号线东延、深惠城际推进中。"深圳上班、东莞睡觉"从临时变常态。<b>部分需求外溢，但核心区不可替代。</b></p>
+</div>
+<div class="judge j4">
+<h4><span class="j-icon">🟣</span> 结构优化>数量增长</h4>
+<p>719万人才中高技能166.5万，国家高新企业2.6万家密度全国第一。从"抢人"转向"抢人才"。<b>高技能支撑中高端租赁，普通劳动力需求见顶。</b></p>
+</div>
+</div>
 </div>
 
 </div>
-</body>
-</html>
 </body>
 </html>
